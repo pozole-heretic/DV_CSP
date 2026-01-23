@@ -1,8 +1,4 @@
-question = input("What is your favorite color? ")
-
-output = input("That's cool, mine is blue. What is your favorite food? ")
-
-question2 = input("Dude, same! I didn't know that we both liked that!")
+name = input("What's your name? ")
 
 
-print(question, output, question2)
+print("Hello",name,"my name is Alfred and I'm seeing if this code works")
