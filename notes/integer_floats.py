@@ -1,11 +1,13 @@
-price = 19.99
+"""price = float(input("How much did it cost: $"))
 
-sales_tax = 6
+sales_tax = float(input("How much is the sales tax: %"))/100
 
-sales_tax_decimal = sales_tax/100
+total = round(price + (price*sales_tax), 2)
 
-tax = price * sales_tax_decimal
+print(total)"""
 
-total = price + tax
+apples = int(input("How many apples are there: "))
 
-print(total)
+friends = 8
+
+print("Each friend can have", apples//friends, "and I have", apples%friends, "left over")
