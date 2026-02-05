@@ -16,9 +16,9 @@ total = monthly_transportation + monthly_groceries + monthly_utilities + monthly
 def percent(monthly):
     return round(monthly/monthly_income)*100
 
-print("Your rent is $", monthly_rent_mortgage, "and that is ", percent(), "% of your income.")
+print("Your rent is $", monthly_rent_mortgage, "and that is ", percent(monthly_rent_mortgage), "% of your income.")
 
-print("Your utilities are $", monthly_utilities, "and that is ", round(monthly_utilities/monthly_income*100), "% of your income.")
+"""print("Your utilities are $", monthly_utilities, "and that is ", round(monthly_utilities/monthly_income*100), "% of your income.")
 
 print("Your groceries are $", monthly_groceries, "and that is ", round(monthly_groceries/monthly_income*100), "% of your income.")
 
@@ -26,4 +26,4 @@ print("Your transporation is $", monthly_transportation, "and that is ", round(m
 
 print("You should save $", monthly_income/10, ", that is 10% of your income.")
 
-print("You have $", monthly_income-total, "of spending money each month!")
+print("You have $", monthly_income-total, "of spending money each month!")"""
