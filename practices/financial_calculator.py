@@ -1,16 +1,22 @@
-monthly_income = float(input("What is your monthly income: $"))
+def question(monthly):
+    return float(input(f"What is your monthly {monthly}: $"))
 
-monthly_rent_mortgage = float(input("What is your monthly rent/mortgage: $"))
+monthly_income = question("income")
 
-monthly_utilities = float(input("What is your monthly utilities: $"))
+monthly_rent_mortgage = question("rent/mortgage")
 
-monthly_groceries = float(input("What is your monthly groceries: $"))
+monthly_utilities = question("utilities")
 
-monthly_transportation = float(input("What is your monthly transportation: $"))
+monthly_groceries = question("groceries")
+
+monthly_transportation = question("transportation")
 
 total = monthly_transportation + monthly_groceries + monthly_utilities + monthly_rent_mortgage
 
-print("Your rent is $", monthly_rent_mortgage, "and that is ", round(monthly_rent_mortgage/monthly_income*100), "% of your income.")
+def percent(monthly):
+    return round(monthly/monthly_income)*100
+
+print("Your rent is $", monthly_rent_mortgage, "and that is ", percent(), "% of your income.")
 
 print("Your utilities are $", monthly_utilities, "and that is ", round(monthly_utilities/monthly_income*100), "% of your income.")
 
