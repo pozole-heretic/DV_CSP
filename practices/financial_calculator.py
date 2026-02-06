@@ -20,11 +20,11 @@ def percent(monthly):
 
 print("Your rent is $", monthly_rent_mortgage, "and that is ", percent(monthly_rent_mortgage), "% of your income.")
 
-print("Your utilities are $", monthly_utilities, "and that is ", round(monthly_utilities/monthly_income*100), "% of your income.")
+print("Your utilities are $", monthly_utilities, "and that is ", percent(monthly_utilities), "% of your income.")
 
-print("Your groceries are $", monthly_groceries, "and that is ", round(monthly_groceries/monthly_income*100), "% of your income.")
+print("Your groceries are $", monthly_groceries, "and that is ", percent(monthly_groceries), "% of your income.")
 
-print("Your transporation is $", monthly_transportation, "and that is ", round(monthly_transportation/monthly_income*100), "% of your income.")
+print("Your transporation is $", monthly_transportation, "and that is ", percent(monthly_transportation), "% of your income.")
 
 print("You should save $", savings, ", that is 10% of your income.")
 
