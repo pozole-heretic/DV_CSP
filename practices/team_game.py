@@ -6,40 +6,17 @@ word = random.choice(words) #this randomly chooses one word from the list above 
 
 attempts = 0 
 
-list_of_guessed_letters = []
-
-display_words = ""
-
-guess = input("What do you think the word is?: ").lower()
-
-list_of_guessed_letters.append(guess)
-
-for letter in word:
-    if letter in list_of_guessed_letters:
-         display_words += letter
-    else:
-        display_words += "_"
-
-print(display_words)
-
-if display_words == word:
-    print("Congratulations! You guessed the word!")
-if list_of_guessed_letters == guess:
-    print("That was a good guess")
-else:
-    attempts += 1
-print(attempts)
-
-if attempts == 0:
-    print('''
+def hangman():
+    if attempts == 0:
+        print('''
 ---------
 |       |
 |
 |
 |
 |_________''')
-elif attempts == 1:
-    print('''
+    elif attempts == 1:
+        print('''
 ---------
 |       |
 |       O
@@ -47,28 +24,52 @@ elif attempts == 1:
 |
 |_________''')
 
-elif attempts == 2:
-    print('''
+    elif attempts == 2:
+        print('''
 ---------
 |       |
 |       O
 |       |
 |
 |_________''')
-elif attempts == 3:
-    print('''
+    elif attempts == 3:
+        print('''
 ---------
 |       |
 |       O
 |       |
 |      / \\
 |_________''')
-elif attempts == 4:
-    print('''
+    elif attempts == 4:
+        print('''
 ---------
 |       |
 |       O
 |      /|\\
 |      / \\
 |_________''')
-print(guess)  
+        
+list_of_guessed_letters = []
+def game_loop():
+    while True:
+        display_words = ""
+        for letter in word:
+            if letter in list_of_guessed_letters:
+                display_words += letter
+            else:
+                display_words += "_"
+
+        print(display_words)
+        hangman()
+        if display_words == word:
+            print("Congradulations! You won the game!")
+            break
+        
+        guess = input("What do you think one of the letters in the word is?: ").lower()
+
+        list_of_guessed_letters.append(guess)
+        if guess not in word:
+                attempts += 1
+
+        print(attempts)
+game_loop()
