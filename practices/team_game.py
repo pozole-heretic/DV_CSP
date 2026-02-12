@@ -46,7 +46,7 @@ def hangman():
 |      /|\\
 |      / \\
 |_________''')
-        
+    
 list_of_guessed_letters = []
 def game_loop():
     global attempts
@@ -64,7 +64,11 @@ def game_loop():
         if display_words == word:
             print("Congratulations! You won the game!")
             break
-        guess = input("What do you think one of the letters in the word is?: ").lower()
+        elif attempts == 4:
+            print("You lost the game! The man was hung! The word was", word)
+            break
+        elif attempts < 4:
+            guess = input("What do you think one of the letters in the word is?: ").lower()
 
         list_of_guessed_letters.append(guess)
         if guess not in word:
