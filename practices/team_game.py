@@ -1,9 +1,7 @@
 import random
-
 words = ["rhythm", "queue", "sixth", "jazz", "gym", "cryptic"] #this sets a list of words for the computer to choose from
 
 word = random.choice(words) #this randomly chooses one word from the list above to use for the game
-
 attempts = 0 
 
 def hangman():
@@ -51,6 +49,7 @@ def hangman():
         
 list_of_guessed_letters = []
 def game_loop():
+    global attempts
     while True:
         display_words = ""
         for letter in word:
@@ -62,14 +61,12 @@ def game_loop():
         print(display_words)
         hangman()
         if display_words == word:
-            print("Congradulations! You won the game!")
+            print("Congratulations! You won the game!")
             break
-        
         guess = input("What do you think one of the letters in the word is?: ").lower()
 
         list_of_guessed_letters.append(guess)
         if guess not in word:
-                attempts += 1
+            attempts += 1
 
-        print(attempts)
 game_loop()
