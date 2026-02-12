@@ -52,6 +52,7 @@ def hangman():
 list_of_guessed_letters = []
 def game_loop():
     while True:
+        global attempts
         display_words = ""
         for letter in word:
             if letter in list_of_guessed_letters:
@@ -62,7 +63,7 @@ def game_loop():
         print(display_words)
         hangman()
         if display_words == word:
-            print("Congradulations! You won the game!")
+            print("Congratulations! You won the game!")
             break
         
         guess = input("What do you think one of the letters in the word is?: ").lower()
