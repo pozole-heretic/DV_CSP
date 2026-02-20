@@ -7,6 +7,6 @@ int main(){
     scanf("%s", &name);
     printf("What is your favorite animal?\n");
     scanf("%s", &animal);
-    printf("%s's favorite animal is a(n) %s\n", name, animal);
+    printf("%s's favorite animal is a(n) %s!\n", name, animal);
     return 0;
 }
