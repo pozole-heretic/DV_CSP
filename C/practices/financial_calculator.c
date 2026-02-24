@@ -1,7 +1,7 @@
 # include <stdio.h>
 
 int main(){
-    char income[1];
+    float income[1];
     char rentmortgage[2];
     char utilities[3];
     char groceries[4];
