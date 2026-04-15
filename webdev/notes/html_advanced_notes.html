@@ -2,7 +2,37 @@
 <html lang="en">
     <head>
         <title>Notes about advanced HTML</title>
-        <meta charset="UTF-6">
+        <meta charset="UTF-8">
+        <!--Embeded style sheets go inside the head tag-->
+        <style>
+            *{
+                background-color: rgb(255, 50, 110);
+            }
+            img{
+                width: 50%
+                
+            }
+            #unordered{
+                font-family: fantasy;
+            }
+            #ordered{
+                color: teal;
+                background-color: blanchedalmond;
+            }
+            .odd{
+                background-color: grey;
+            }
+            p{
+                background-color: red;
+                color: #8ff324;
+                background-color: blueviolet;
+            }
+            h1{
+                text-align: center;
+                font-size: 100%;
+                border: 3px solid white;
+            }
+        </style>
     </head>
     <body>
         <h1>HTML advanced notes</h1>
@@ -12,18 +42,18 @@
         <div id="ordered">
             <p>This is how we make an ordered (numbered) list</p>
             <ol>
-                <li>Computer Science Principles</li>
+                <li class="odd">Computer Science Principles</li>
                 <li>Computer Programming 1</li>
-                <li>Computer Programming 2</li>
+                <li class="odd">Computer Programming 2</li>
                 <li>Computer Programming 3</li>
             </ol>
         </div>
         <div id="unordered" style="font-family: times new roman;">
             <p>This is how you make an unordered (bulleted) list</p>
             <ul style="list-style-type: circle">
-                <li>Apple</li>
+                <li class="odd">Apple</li>
                 <li>Orange</li>
-                <li>Banana</li>
+                <li class="odd">Banana</li>
                 <li>Peach</li>
             </ul>
             <a href="https://ucas-edu.instructure.com/courses/4362" target="_blank">Canvas Computer Science</a>
