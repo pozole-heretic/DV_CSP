@@ -4,7 +4,16 @@
         <title>Notes about advanced HTML</title>
         <meta charset="UTF-8">
         <!--Embeded style sheets go inside the head tag-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
         <style>
+            body{
+                background-color: rgb(94, 8, 113);
+                font-family: "Pirata One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
             *{
                 background-color: rgb(255, 50, 110);
             }
@@ -32,13 +41,44 @@
                 font-size: 100%;
                 border: 3px solid white;
             }
+            .bold{
+                font-weight: bolder;
+                color: red;
+            }
+            #italics{
+                font-style: italic;
+            }
+            .box{
+                background-color: aquamarine; 
+                height: 100px; 
+                width: 100px; 
+                border: 3px solid green;
+                font-variant: small-caps;
+                margin: 20px;
+                padding: 20px;
+            }
+            #box-wrapper{
+                display: block;
+                margin: auto;
+                width: 50%;
+            }
+            #lists-wrapper{
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+            #imgs-wrapper{
+                display: flex;
+                justify-content: center;
+            }
         </style>
     </head>
     <body>
-        <h1>HTML advanced notes</h1>
-        <div style="background-color: aquamarine; height: 100px; width: 100px; border: 3px solid green;">
+        <h1>HTML <span id="italics">Advanced Notes</soan></h1>
+            <div id="box-wrapper">
+        <div class="box">
             <p>This is in the div</p>
         </div>
+        <div id="lists-wrapper"></div>
         <div id="ordered">
             <p>This is how we make an ordered (numbered) list</p>
             <ol>
@@ -49,7 +89,7 @@
             </ol>
         </div>
         <div id="unordered" style="font-family: times new roman;">
-            <p>This is how you make an unordered (bulleted) list</p>
+            <p>This is how you make an <span class="bold">unordered (bulleted) list</span></p>
             <ul style="list-style-type: circle">
                 <li class="odd">Apple</li>
                 <li>Orange</li>
@@ -58,6 +98,7 @@
             </ul>
             <a href="https://ucas-edu.instructure.com/courses/4362" target="_blank">Canvas Computer Science</a>
         </div>
+        <div id="imgs-wrapper"></div>
         
         <img src="https://media.tenor.com/7gvN5rWmRvEAAAAe/folk-baby-holding-laugh.png" alt="Folk baby with cry emojis" height="200px"/>
     </body>
