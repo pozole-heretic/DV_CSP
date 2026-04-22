@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Notes</title>
+        <meta charset="UTF-8">
+        <style>
+            #folkbaby{
+                display: none;                
+                width: 50%;
+            }
+        </style>
+        <script>
+            let count = 0
+            let img = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJvY3ceVD3Uk6Bpj5xmXHm7XpKgTo-aToLUQ&s", "https://ih1.redbubble.net/image.4712333939.2789/flat,750x,075,f-pad,750x1000,f8f8f8.webp", "https://custom-progress-bar.com/cdn/images/34/two-legged-horse-meme-custom-progress-bar-m.png"]
+            let img_count = 0
+            function change(){
+                if (img_count >= imgs.length -1){
+                    img_count = 0
+                }else{
+                    img_count +=1
+                }
+                document.getElementById('folkbabys').src = imgs[img_count]
+            }
+            function update(){
+                document.getElementById('title').style.color = document.getElementById("color-choice").value
+            }
+            function add(){
+                count += 1
+                document.getElementById("number").innerHTML = count
+            }
+            function hover(id){
+                document.getElementById(id).style.backgroundColor = "red"
+                document.getElementById(id).style.color = "red"
+            }
+            function unhover(id){
+                document.getElementById(id).style.backgroundColor = "lightgrey"
+                document.getElementById(id).style.color = "black"
+            }
+            function show(){
+                if(document.getElementById("folkbaby").style.display == "block"){
+                    document.getElementById("folkbaby").style.display = "none"
+                }else{
+                    document.getElementById("folkbaby").style.display = "block"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="title" onmouseover="alert('This is about JavaScript!')">JavaScript</h1>
+        <input type="color" id="color-choice">
+        <button onclick="update()" id="one" onmouseover="hover('one')" onmouseout="unhover('one')">Click Me!</button>
+        <p id="number" onmouseover="show()">0</p>
+        <button onclick="add()" id="two" onmouseover="hover('two')" onmouseout="unhover('two')">Add</button>
+        <img src="https://media.tenor.com/7gvN5rWmRvEAAAAe/folk-baby-holding-laugh.png" id="folkbaby" alt="Folkbabys" onmouseover="change()">
+    </body>
+</html>
