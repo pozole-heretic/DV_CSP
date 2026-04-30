@@ -14,7 +14,7 @@
                 color: white;
                 background-color: rgb(158, 108, 50);
             }
-            h1{
+            *{
                 font-family: "Chango", sans-serif;
                 font-weight: 400;
                 font-style: normal;
@@ -54,7 +54,7 @@
             }
             #two{
                 height: 25px;
-                width: 85px;
+                width: 125px;
             }
         </style>
         <script>
@@ -69,10 +69,10 @@
                 document.getElementById("delicatearch").src = imgs[count]
             }
             function add(){
-                if(document.getElementById("feature").style.display == "block"){
-                    document.getElementById("feature").style.display = "none"
+                if(document.getElementById("list").style.display == "block"){
+                    document.getElementById("list").style.display = "none"
                 }else{
-                    document.getElementById("feature").style.display = "block"
+                    document.getElementById("list").style.display = "block"
                 }
             }
             function hover(id){
@@ -98,12 +98,11 @@
                 <h2>The Spike of Fame</h2>
                 <img id="picture2" src="https://www.nps.gov/common/uploads/cropped_image/primary/78A2747C-CEC5-0C9B-464978166B28ED01.jpg?width=1300&quality=90&mode=crop" alt="hikes" />
             </div>
-        <img id="picture3" src="https://simplytodaylife.com/wp-content/uploads/2026/04/Park-Avenue-Hike-in-Arches.jpg" alt="hiking"/>
-        <div id="list"><h2>Reasons to visit Arches National Park</h2>
+        <div id="list"><img id="picture3" src="https://simplytodaylife.com/wp-content/uploads/2026/04/Park-Avenue-Hike-in-Arches.jpg" alt="hiking"/> <h2>Reasons to visit Arches National Park</h2>
             <ul style="list-style-type: circle">
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>There are plenty of iconic landmarks to see. Some include the famous Delicate Arch, the Double Arch, and the Landscape Arch.</li>
+                <li>There are plenty of scenic and easy hikes, most of which are around an hour long. This makes this destination perfect for people of all skills, tourists, families, and hiking pros because there are all types of hikes.</li>
+                <li>The geography here is unlike the rest of the world. Nowhere else on the planet is there this many natural arches in such a small area. This makes every arch/destination very accessible.</li>
                 <li></li>
             </ul></div>
         <button onclick="add()" id="two" onmouseover="hover('two')" onmouseout="unhover('two')">Show/Hide</button>
